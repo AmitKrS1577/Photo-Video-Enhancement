@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<h2>SUPPORTED FILES</h2>
+<p>IMAGES • jpg png tif bmp webp heic</p>
+<p>VIDEOS • mp4 webm mkv flv gif avi mov mpg qt 3gp</p>
+
+<form action="/" method="POST">
+  {% csrf_token %}
+  <p>{{ forms.file }}</p>
+  <p><input class="button" type="submit" value="Select File"></p>
+    <h3>Photo-Video Enhancer</h3>
+
+    <div class="row">
+      <label>Output Path</label>
+      <button class="button small">SELECT</button>
+      <input type="text" name="output_path" placeholder="Same path as input file" disabled>
+    </div>
+
+    <div class="row">
+      <label>AI Model</label>
+      <select required name="ai_model">
+        <option style="display:none" disabled selected value> Select AI Model </option>
+        <option>RealESR_Gx4</option>
+        <option>RealESRGANx4</option>
+        <option>RealSRx4_Anime</option>
+        <option>BSRGANx4</option>
+        <option>BSRGANx2</option>
+        <option>IRCNN_Mx1</option>
+        <option>IRCNN_Lx1</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>AI Precision</label>
+      <select name="ai_precision">
+        <option>Half precision</option>
+        <option>Full precision</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>Input Resolution %</label>
+      <input type="number" name="in_resolution" value="100">
+    </div>
+
+    <div class="row">
+      <label>Interpolation</label>
+      <select name="interpolation">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+        <option>Disabled</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>Image Output</label>
+      <select name="img_output">
+        <option>.png</option>
+        <option>.jpg</option>
+        <option>.bmp</option>
+        <option>.tiff</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <label>Video Output</label>
+      <select name="vid_output">
+        <option>.mp4 (x264)</option>
+        <option>.mp4 (x265)</option>
+        <option>.avi</option>
+      </select>
+    </div>
+
+    <button class="button" type="submit">UPSCALE</button>
+
+  </div>
+</form>
+{% endblock body %}

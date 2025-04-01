@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %} | Photo-Video Enhancer</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-logo">
+            <a href="/"><img src="static/img/logo.ico" alt="Photo-Video Enhancer">
+                <span class="nav-title">Photo-Video Enhancer</span></a>
+        </div>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        {% block body %}{% endblock body %}
+    </div>
+
+</body>
+
+</html>

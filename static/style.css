@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background: #222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
+.nav-logo a {
+    font-family: Arial, sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.nav-logo img:hover {
+    transform: scale(1.1);
+    transition: transform 0.15s;
+}
+
+.nav-title {
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-title:hover {
+    transform: scale(1.03);
+    color: rgb(65, 105, 223);
+    transition: transform 0.15s;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li:hover {
+    transform: scale(1.1);
+    transition: transform 0.15s;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 5px;
+}
+
+.navbar ul li a:hover {
+    color: #eeff00;
+    background-color: rgb(248, 78, 78);
+}
+
+/* Main Container */
+.container {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 25px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.button {
+    background-color: #a8a8a8;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    transition: transform 0.15s;
+}
+
+.button.small {
+    padding: 9px 9px;
+    margin-left: 10px;
+}
+
+.enhancer {
+    background: #1a1a1a;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+select {
+    width: 60%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+input, textarea{
+    width: 57%;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* .footer {
+    margin-top: 20px;
+    font-size: 14px;
+    opacity: 0.7;
+} */
